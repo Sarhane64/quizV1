@@ -6,43 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <div class="header-container">
-            <h1>QUIZZ Challenge</h1>
+            <h1>QUIZZ<br> Challenge</h1>
 
-            <h2>ton pseudo:<span class="speudo"></span></h2>
+
         </div>
     </header>
     <main>
-        <div>
-            <select name="City" id="">
-                <option value="">--choisie ta ville--</option>
-                <option value="LYON">LYON</option>
-                <option value="BORDEAUX">BORDEAUX</option>
-                <option value="PARIS">PARIS</option>
-                <option value="BAYONNE">BAYONNE</option>
-                <option value="CHARTRES">CHARTRES</option>
-            </select>
-        </div>
 
-        <button oninput="" id="start">Start</button>
+        <img src="./asset/image.png" alt="">
+
+
+        <button oninput="" id="start">start</button>
+
+
+
 
         <div class="question-container">
             <p id="question">Question</p>
-            <input type="button" id="reponse1" name="rep" value="reponse1">
-            <input type="button" id="reponse2" name="rep" value="reponse2">
-            <input type="button" id="reponse3" name="rep" value="reponse3">
-            <input type="button" id="reponse4" name="rep" value="reponse4">
+            <div class="container">
+
+                <input type="button" id="reponse1" class="rep" value="reponse1">
+                <input type="button" id="reponse2" class="rep" value="reponse2">
+                <input type="button" id="reponse3" class="rep" value="reponse3">
+                <input type="button" id="reponse4" class="rep" value="reponse4">
+
+            </div>
+
         </div>
 
     </main>
     <footer>
-        <p>
+        <p class="footerp">
             Tu t'appretes à faire le quizz le plus dur de France attention tu dois activer le chrono pour chaque question. Aide toi de la maps pour répondre aux questions. BONNE CHANCE !!!!
         </p>
+
     </footer>
     <script src="index.js"></script>
 </body>
