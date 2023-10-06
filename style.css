@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 body {
-    background: url("./retro-sci-fi-futuristic-background-1980s-and-1990s-style-3d-illustration-digital-landscape-in-a-cyber-world-for-use-as-design-cover-free-vector\ \(1\).jpg");
+    background: url("./HD-wallpaper-synthwave-blue-higgsas-iphone-mountain-old-school-outrun-purple-retro-samsung-sun-vaporwave.jpg") fixed center/cover;
     background-repeat: no-repeat;
 }
 
@@ -33,11 +33,12 @@ body {
     --grey2: #d9d9d9;
 }
 
+.header-container {
+    margin-left: -25px;
+}
+
 h1 {
     color: var(--yellow1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
     font-family: "Monoton";
     font-weight: 300;
@@ -81,7 +82,7 @@ footer {
     background-color: #20d4b0;
     height: 40px;
     border-radius: 10px;
-    margin-top: 50px;
+    margin-top: 70%;
     font-family: "Luckiest Guy";
     color: #d9d9d9;
     font-size: 1.5rem;
@@ -97,6 +98,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-left: -25px;
 }
 
 .question-containerTest {
@@ -116,7 +118,7 @@ footer {
 }
 
 .container {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,6 +126,7 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     margin-top: 55px;
+    margin-left: -5px;
 }
 
 .rep {
