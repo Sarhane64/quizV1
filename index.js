@@ -1,14 +1,14 @@
-// Variables pour le score et la question actuelle
+// Variables pour suivre la question actuelle et le score
 let currentQuestion = 0;
 let score = 0;
 
-
+// Récupérer les éléments HTML
 const questionElement = document.querySelector("#question");
-const optionElements = document.querySelectorAll("input[name='rep']");
+const optionElements = document.querySelectorAll("input[class='rep']");
 const button = document.querySelector("#start");
 const container = document.querySelector(".question-container");
 
-
+// Tableau de questions et réponses
 const questions = [{
         question: "Quelle est la capitale de la France ?",
         options: ["Paris", "Londres", "Berlin", "Madrid"],
@@ -30,11 +30,12 @@ const display = () => {
         for (let i = 0; i < optionElements.length; i++) {
             optionElements[i].value = questions[currentQuestion].options[i];
             optionElements[i].addEventListener("click", answer);
-            optionElements[i].style.background = ""; // Réinitialiser la couleur de fond
+            optionElements[i].style.background = "";
+            // Réinitialiser la couleur de fond
         }
     } else {
-        // Si toutes les questions ont été répondues
-        questionElement.textContent = "Quiz terminé ! Votre score : " + score;
+        // Toutes les questions ont été répondues
+        questionElement.textContent = `Quiz terminé ! Votre score : ${score} / ${currentQuestion}`;
     }
 };
 
@@ -49,15 +50,17 @@ const answer = (e) => {
         e.target.style.background = "red";
     }
 
-    // Permet de donner du temps avant de passer a la prochaine question
+    // Utilisez setTimeout avec une fonction fléchée pour incrémenter currentQuestion après 2 secondes
     setTimeout(() => {
         currentQuestion++;
         display();
-    }, 2000);
+    }, 1000);
 };
 
 // Attachez l'événement "click" au bouton de démarrage
 button.addEventListener("click", () => {
-    container.style.display = "flex"; 
-    display(); 
+    container.style.display = "flex"; // Affichez le conteneur
+    display(); // Affichez la première question
+    button.style.display = "none"
+    container.classList.add("question-containerTest")
 });
